@@ -1,0 +1,47 @@
+<svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="leaf1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#81C784"/>
+              <stop offset="100%" stop-color="#388E3C"/>
+            </linearGradient>
+            <linearGradient id="leaf2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#A5D6A7"/>
+              <stop offset="100%" stop-color="#43A047"/>
+            </linearGradient>
+            <linearGradient id="leaf3" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#66BB6A"/>
+              <stop offset="100%" stop-color="#2E7D32"/>
+            </linearGradient>
+          </defs>
+          <g class="leaf-group">
+            <!-- 茎 -->
+            <path d="M75 110 Q72 90 70 70 Q68 55 75 40" stroke="#6D4C41" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <!-- 左叶 -->
+            <path d="M70 70 Q40 40 30 55 Q20 70 55 80 Z" fill="url(#leaf1)" opacity="0.9"/>
+            <path d="M70 70 Q50 58 42 65" stroke="#C8E6C9" stroke-width="1" fill="none" opacity="0.6"/>
+            <!-- 右叶 -->
+            <path d="M73 58 Q105 30 110 48 Q115 66 82 68 Z" fill="url(#leaf2)" opacity="0.9"/>
+            <path d="M73 58 Q92 42 98 52" stroke="#C8E6C9" stroke-width="1" fill="none" opacity="0.6"/>
+            <!-- 顶叶 -->
+            <path d="M75 40 Q60 15 70 10 Q80 5 85 20 Q90 35 75 40 Z" fill="url(#leaf3)" opacity="0.9"/>
+            <path d="M75 40 Q72 25 76 18" stroke="#C8E6C9" stroke-width="1" fill="none" opacity="0.6"/>
+            <!-- 小左叶 -->
+            <path d="M68 85 Q45 78 42 85 Q39 92 60 90 Z" fill="url(#leaf1)" opacity="0.7"/>
+            <!-- 小右叶 -->
+            <path d="M72 82 Q90 72 95 80 Q98 88 78 88 Z" fill="url(#leaf2)" opacity="0.7"/>
+            <!-- 可爱的脸 — 在中间叶子上 -->
+            <!-- 眼睛 -->
+            <ellipse cx="66" cy="64" rx="2.5" ry="3" fill="#2E7D32"/>
+            <ellipse cx="78" cy="60" rx="2.5" ry="3" fill="#2E7D32"/>
+            <circle cx="67" cy="62.5" r="1" fill="white"/>
+            <circle cx="79" cy="58.5" r="1" fill="white"/>
+            <!-- 微笑 -->
+            <path d="M67 68 Q72 73 79 65" stroke="#2E7D32" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <!-- 腮红 -->
+            <ellipse cx="62" cy="68" rx="3.5" ry="2.5" fill="#66BB6A" opacity="0.5"/>
+            <ellipse cx="82" cy="64" rx="3.5" ry="2.5" fill="#66BB6A" opacity="0.5"/>
+          </g>
+          <!-- 小水滴 -->
+          <ellipse cx="45" cy="72" rx="2.5" ry="3.5" fill="#B3E5FC" opacity="0.7"/>
+          <ellipse cx="95" cy="55" rx="2" ry="3" fill="#B3E5FC" opacity="0.6"/>
+        </svg>

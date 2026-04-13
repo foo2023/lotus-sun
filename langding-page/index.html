@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lotus Sun - 本地视频播放器</title>
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img width="40px" src="assets/icon.svg"/>
+        <span>Lotus Sun</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#features">功能</a></li>
+        <li><a href="#download">下载</a></li>
+        <li><a href="#about">关于</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Lotus Sun</h1>
+        <p class="tagline">听经闻法破群迷，处淤泥而不染</p>
+        <p class="description">一个简洁优雅的本地视频播放器，让您能够安心的听经闻法</p>
+        <a href="#download" class="cta-button">立即下载</a>
+      </div>
+      <div class="hero-visual">
+        <svg class="lotus-hero" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="petalPink" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#F8BBD0"/>
+              <stop offset="50%" style="stop-color:#F48FB1"/>
+              <stop offset="100%" style="stop-color:#EC407A"/>
+            </linearGradient>
+            <linearGradient id="petalLight" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#FCE4EC"/>
+              <stop offset="50%" style="stop-color:#F8BBD0"/>
+              <stop offset="100%" style="stop-color:#F48FB1"/>
+            </linearGradient>
+            <linearGradient id="petalDeep" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#AD1457"/>
+              <stop offset="50%" style="stop-color:#E91E63"/>
+              <stop offset="100%" style="stop-color:#F48FB1"/>
+            </linearGradient>
+            <radialGradient id="lotusCenter" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" style="stop-color:#FFF9C4"/>
+              <stop offset="100%" style="stop-color:#FFD54F"/>
+            </radialGradient>
+            <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#81C784"/>
+              <stop offset="100%" style="stop-color:#388E3C"/>
+            </linearGradient>
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+            <filter id="shadow">
+              <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#BF360C" flood-opacity="0.2"/>
+            </filter>
+          </defs>
+          <g filter="url(#shadow)" transform="translate(125, 125)">
+            <ellipse cx="-65" cy="-15" rx="30" ry="55" fill="url(#petalDeep)" transform="rotate(-35, -65, -15)" opacity="0.8"/>
+            <ellipse cx="65" cy="-15" rx="30" ry="55" fill="url(#petalDeep)" transform="rotate(35, 65, -15)" opacity="0.8"/>
+            <ellipse cx="-45" cy="-25" rx="26" ry="55" fill="url(#petalPink)" transform="rotate(-20, -45, -25)" opacity="0.9"/>
+            <ellipse cx="45" cy="-25" rx="26" ry="55" fill="url(#petalPink)" transform="rotate(20, 45, -25)" opacity="0.9"/>
+            <ellipse cx="-28" cy="-30" rx="24" ry="52" fill="url(#petalPink)" transform="rotate(-10, -28, -30)"/>
+            <ellipse cx="28" cy="-30" rx="24" ry="52" fill="url(#petalPink)" transform="rotate(10, 28, -30)"/>
+            <ellipse cx="-12" cy="-35" rx="22" ry="50" fill="url(#petalLight)" transform="rotate(-3, -12, -35)"/>
+            <ellipse cx="12" cy="-35" rx="22" ry="50" fill="url(#petalLight)" transform="rotate(3, 12, -35)"/>
+            <ellipse cx="0" cy="-38" rx="18" ry="48" fill="url(#petalLight)"/>
+            <path d="M0,-85 Q0,-50 0,-5" fill="none" stroke="#F48FB1" stroke-width="1" opacity="0.5"/>
+            <path d="M-12,-82 Q-10,-50 -8,-5" fill="none" stroke="#F48FB1" stroke-width="1" opacity="0.4"/>
+            <path d="M12,-82 Q10,-50 8,-5" fill="none" stroke="#F48FB1" stroke-width="1" opacity="0.4"/>
+            <circle cx="0" cy="-15" r="14" fill="url(#lotusCenter)" stroke="#FFB300" stroke-width="1.5"/>
+            <circle cx="-4" cy="-18" r="2" fill="#F9A825"/>
+            <circle cx="4" cy="-18" r="2" fill="#F9A825"/>
+            <circle cx="0" cy="-12" r="2" fill="#F9A825"/>
+            <circle cx="-6" cy="-12" r="1.5" fill="#F9A825"/>
+            <circle cx="6" cy="-12" r="1.5" fill="#F9A825"/>
+            <circle cx="0" cy="-20" r="1.5" fill="#F9A825"/>
+            <path d="M-70,15 Q-45,-5 -20,12 Q-45,22 -70,15Z" fill="url(#leafGrad)" opacity="0.85"/>
+            <path d="M70,15 Q45,-5 20,12 Q45,22 70,15Z" fill="url(#leafGrad)" opacity="0.85"/>
+            <path d="M-65,14 Q-42,6 -25,13" fill="none" stroke="#2E7D32" stroke-width="0.8" opacity="0.5"/>
+            <path d="M65,14 Q42,6 25,13" fill="none" stroke="#2E7D32" stroke-width="0.8" opacity="0.5"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="floating-elements">
+      <!-- ☀️ 太阳 -->
+      <div class="float-item float-1">
+        <img alt="leaf svg" src="assets/sun.svg" />
+      </div>
+
+      <!-- 🌿 绿叶 -->
+      <div class="float-item float-2">
+        <img alt="leaf svg" src="assets/leaf.svg" />
+      </div>
+
+      <!-- ✨ 星星 -->
+      <div class="float-item float-3">
+        <img alt="star svg" src="assets/star.svg" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <h2>Lotus Sun 能为您提供的服务</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#eca152" stroke-width="3"/>
+            <path d="M50,20 L50,80 M20,50 L80,50" stroke="#eca152" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="50" cy="50" r="8" fill="#eca152"/>
+          </svg>
+        </div>
+        <h3>简洁优雅</h3>
+        <p>清爽的界面设计，让您专注于听经闻法</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="15" y="25" width="70" height="50" rx="5" fill="none" stroke="#af2084" stroke-width="3"/>
+            <polygon points="35,40 35,60 65,50" fill="#af2084"/>
+          </svg>
+        </div>
+        <h3>本地播放</h3>
+        <p>所有视频都存储在您的电脑上，无广告也不消耗流量</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20,50 L40,70 L80,20" fill="none" stroke="#22c55e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>自动保存进度</h3>
+        <p>智能记忆您的观看进度，随时继续观看，不会丢失任何内容</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="35" fill="none" stroke="#eca152" stroke-width="3"/>
+            <path d="M50,20 L50,50 L70,70" fill="none" stroke="#eca152" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>快速响应</h3>
+        <p>轻量级应用，快速启动，流畅播放，不占用过多系统资源</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="30" width="60" height="40" rx="3" fill="none" stroke="#af2084" stroke-width="3"/>
+            <circle cx="35" cy="50" r="4" fill="#af2084"/>
+            <circle cx="50" cy="50" r="4" fill="#af2084"/>
+            <circle cx="65" cy="50" r="4" fill="#af2084"/>
+          </svg>
+        </div>
+        <h3>软件安全性</h3>
+        <p>开源软件，原代码位于Github Repository，安全放心使用</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30,70 L50,30 L70,70 Z" fill="none" stroke="#22c55e" stroke-width="3" stroke-linejoin="round"/>
+            <line x1="50" y1="30" x2="50" y2="70" stroke="#22c55e" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3>完全免费</h3>
+        <p>开源应用，永久免费使用，无广告</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section id="download" class="download">
+    <h2>开始使用</h2>
+    <p class="download-intro">选择适合您的操作系统版本下载 (*目前只支持Window10/11)</p>
+    
+    <div class="download-cards">
+      <div class="download-card">
+        <div class="os-icon">💻</div>
+        <h3>Windows</h3>
+        <p class="os-desc">适用于 Windows 10 及以上版本</p>
+        <div class="download-options">
+          
+          <div class="download-option">
+            <p class="option-name">NSIS 安装程序</p>
+            <p class="option-desc">推荐使用，自动安装和更新</p>
+            <a href="#" class="download-btn">下载 .exe</a>
+          </div>
+          <div class="download-option">
+            <p class="option-name">MSI 安装程序</p>
+            <p class="option-desc">第二首选</p>
+            <a href="#" class="download-btn">下载 .msi</a>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- <div class="download-card">
+        <div class="os-icon">🍎</div>
+        <h3>macOS</h3>
+        <p class="os-desc">适用于 macOS 10.13 及以上版本</p>
+        <div class="download-options">
+          <div class="download-option">
+            <p class="option-name">DMG 安装包</p>
+            <p class="option-desc">标准 macOS 安装方式</p>
+            <a href="#" class="download-btn">下载 .dmg</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="download-card">
+        <div class="os-icon">🐧</div>
+        <h3>Linux</h3>
+        <p class="os-desc">适用于主流 Linux 发行版</p>
+        <div class="download-options">
+          <div class="download-option">
+            <p class="option-name">AppImage</p>
+            <p class="option-desc">通用 Linux 应用格式</p>
+            <a href="#" class="download-btn">下载 .AppImage</a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="install-guide">
+      <h3>安装说明</h3>
+      <div class="guide-steps">
+        <div class="step">
+          <span class="step-number">1</span>
+          <p><strong>下载</strong>：点击上方按钮下载适合您系统的版本</p>
+        </div>
+        <div class="step">
+          <span class="step-number">2</span>
+          <p><strong>安装</strong>：双击下载的文件，如弹出警告，选more info，run anyway，按照提示完成安装</p>
+        </div>
+        <div class="step">
+          <span class="step-number">3</span>
+          <p><strong>启动</strong>：从开始菜单或应用程序中找到 Lotus Sun 并打开</p>
+        </div>
+        <div class="step">
+          <span class="step-number">4</span>
+          <p><strong>选择文件夹</strong>：点击"选择资料夹"按钮，选择您的视频所在位置</p>
+        </div>
+        <div class="step">
+          <span class="step-number">5</span>
+          <p><strong>开始观看</strong>：点击任何视频开始播放，享受观看体验</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-content">
+      <h2>关于 Lotus Sun</h2>
+      <p>Lotus Sun 启发与末学希望听经时，可以有观看记录，下次回来可以继续上次的进度。</p>
+      <p>Lotus Sun 名字起源与莲花和阳光，表征身心处于淤泥而不受淤泥的干扰（如阳光般的灿烂）</p>
+      <p>整部软件由AI书写设计，末学只是负责使用和分享</p>
+      <div class="about-features">
+        <div class="about-item">
+          <span class="about-icon">🌸</span>
+          <p><strong>纯净设计</strong><br>简洁的界面，专注于内容</p>
+        </div>
+        <div class="about-item">
+          <span class="about-icon">☀️</span>
+          <p><strong>温暖体验</strong><br>舒适的配色，护眼的设计</p>
+        </div>
+        <div class="about-item">
+          <span class="about-icon">🔒</span>
+          <p><strong>隐私保护</strong><br>完全本地存储，无云同步</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2026 Lotus Sun. 开源项目，永久免费。</p>
+      <div class="footer-links">
+        <a href="https://github.com/foo2023/lotus-sun" target="_blank">GitHub</a>
+        <p>任何疑问请mail to-><a href="mailto:fooshien541@gmail.com">fooshien541@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="landing.js"></script>
+</body>
+</html>

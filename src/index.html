@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lotus Sun</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles/variables.css" />
+  <link rel="stylesheet" href="./styles/pages.css" />
+  <link rel="stylesheet" href="./styles/components.css" />
+  <link rel="stylesheet" href="./openplayer.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════
+       PAGE: HOME
+  ══════════════════════════════════ -->
+  <div id="page-home" class="page active">
+    <div class="home-logo">
+      <img width="100" src="/assets/icon.svg" alt="Lotus Sun Logo" />
+    </div>
+    <h1 class="home-title">Lotus Sun</h1>
+    <p class="home-sub">
+      听经闻法破群迷，处淤泥而不染<br />
+      <img src="assets/lotus.svg" alt="Lotus" />
+    </p>
+    <button class="btn-pick" id="btnPickFolder">
+      📂 選擇資料夾
+    </button>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PAGE: LIBRARY
+  ══════════════════════════════════ -->
+  <div id="page-library" class="page">
+    <div class="topbar">
+      <span class="topbar-logo">
+        <img src="/assets/icon.svg" width="24" alt="Logo" />
+      </span>
+      <span class="topbar-title">Lotus Sun</span>
+      <div class="topbar-path">📁 <span id="displayPath">—</span></div>
+      <button class="btn-icon" id="btnRefresh" title="重新選擇資料夾">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+          <path d="M4 12 L4 52 L60 52 L60 20 L30 20 L24 12 Z" fill="#F7C948" stroke="#D4A017" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M4 20 L60 20 L60 52 L4 52 Z" fill="#FBD96D" stroke="#D4A017" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button class="btn-icon" id="btnClearAll" title="清除所有資料">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+          <!-- 盖子 -->
+          <rect x="12" y="14" width="40" height="5" rx="2" fill="#888" stroke="#555" stroke-width="1.5"/>
+          <!-- 把手 -->
+          <rect x="24" y="9" width="16" height="6" rx="3" fill="none" stroke="#555" stroke-width="2"/>
+          <!-- 桶身 -->
+          <path d="M15 19 L18 56 L46 56 L49 19 Z" fill="#AAAAAA" stroke="#555" stroke-width="1.5" stroke-linejoin="round"/>
+          <!-- 竖线装饰 -->
+          <line x1="25" y1="26" x2="25.8" y2="49" stroke="#777" stroke-width="2" stroke-linecap="round"/>
+          <line x1="32" y1="26" x2="32"   y2="49" stroke="#777" stroke-width="2" stroke-linecap="round"/>
+          <line x1="39" y1="26" x2="38.2" y2="49" stroke="#777" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="stats-strip">
+      <span>共 <b id="totalCount">0</b> 部影片</span>
+      <span>已觀看 <b id="watchedCount">0</b> 部</span>
+      <span style="margin-left:auto; font-size:.75rem;">資料儲存於本地文件系統</span>
+    </div>
+
+    <div class="search-wrap">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="搜尋影片名稱…" />
+      </div>
+    </div>
+
+    <div class="video-grid" id="videoGrid"></div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PAGE: PLAYER
+  ══════════════════════════════════ -->
+  <div id="page-player" class="page">
+    <div class="player-topbar">
+      <button class="btn-back" id="btnBack">← 返回</button>
+      <span class="player-title" id="playerTitle">—</span>
+      <div class="save-indicator" id="saveIndicator">
+        <div class="dot"></div>
+        <span id="saveText">等待播放…</span>
+      </div>
+    </div>
+
+    <div class="player-main">
+      <video id="mainVideo" class="op-player__media" controls>
+        您的瀏覽器不支援 HTML5 Video
+      </video>
+    </div>
+
+    <div class="player-info">
+      <div class="info-item">
+        <span class="info-label">目前進度</span>
+        <span class="info-value" id="infoCurrentTime">0:00</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">總長度</span>
+        <span class="info-value" id="infoDuration">—</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">上次儲存</span>
+        <span class="info-value" id="infoLastSaved">—</span>
+      </div>
+      <div class="info-item progress-detail">
+        <span class="info-label">觀看進度</span>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar-fill" id="playerProgressBar" style="width:0%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading overlay -->
+  <div id="loadingOverlay" class="loading-overlay">
+    <img src="./assets/loading.svg" alt="Loading…" class="loading-spinner" />
+    <p class="loading-text">正在载入…</p>
+  </div>
+
+  <!-- Toast container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- OpenPlayer library (全局 UMD) -->
+  <script src="./openplayer.js"></script>
+
+  <!-- App entry point (ES Module) -->
+  <script type="module" src="./js/main.js"></script>
+
+</body>
+
+</html>

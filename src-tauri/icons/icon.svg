@@ -1,0 +1,223 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background gradient - warm sunset -->
+    <radialGradient id="bgGrad" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" style="stop-color:#FFF3E0"/>
+      <stop offset="40%" style="stop-color:#FFE0B2"/>
+      <stop offset="70%" style="stop-color:#FFAB40"/>
+      <stop offset="100%" style="stop-color:#FF8F00"/>
+    </radialGradient>
+
+    <!-- Sun glow gradient -->
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFEE58; stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#FFD54F; stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#FFB300; stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Sun face gradient -->
+    <radialGradient id="sunFace" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" style="stop-color:#FFF9C4"/>
+      <stop offset="60%" style="stop-color:#FFEE58"/>
+      <stop offset="100%" style="stop-color:#FFD600"/>
+    </radialGradient>
+
+    <!-- Lotus petal gradient - pink -->
+    <linearGradient id="petalPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8BBD0"/>
+      <stop offset="50%" style="stop-color:#F48FB1"/>
+      <stop offset="100%" style="stop-color:#EC407A"/>
+    </linearGradient>
+
+    <!-- Lotus petal gradient - lighter pink -->
+    <linearGradient id="petalLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FCE4EC"/>
+      <stop offset="50%" style="stop-color:#F8BBD0"/>
+      <stop offset="100%" style="stop-color:#F48FB1"/>
+    </linearGradient>
+
+    <!-- Lotus petal gradient - deep pink -->
+    <linearGradient id="petalDeep" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#AD1457"/>
+      <stop offset="50%" style="stop-color:#E91E63"/>
+      <stop offset="100%" style="stop-color:#F48FB1"/>
+    </linearGradient>
+
+    <!-- Lotus center gradient -->
+    <radialGradient id="lotusCenter" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFF9C4"/>
+      <stop offset="100%" style="stop-color:#FFD54F"/>
+    </radialGradient>
+
+    <!-- Leaf gradient -->
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#81C784"/>
+      <stop offset="100%" style="stop-color:#388E3C"/>
+    </linearGradient>
+
+    <!-- Sparkle filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#BF360C" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect x="10" y="10" width="492" height="492" rx="100" ry="100" fill="url(#bgGrad)" stroke="#FF8F00" stroke-width="3"/>
+
+  <!-- Outer glow ring -->
+  <circle cx="256" cy="200" r="120" fill="url(#sunGlow)" opacity="0.5"/>
+  <circle cx="256" cy="200" r="90" fill="url(#sunGlow)" opacity="0.3"/>
+
+  <!-- Sun rays - animated feel with varying lengths -->
+  <g transform="translate(256, 195)" opacity="0.85">
+    <!-- Long rays -->
+    <line x1="0" y1="-70" x2="0" y2="-110" stroke="#FFD600" stroke-width="6" stroke-linecap="round"/>
+    <line x1="60.6" y1="-35" x2="95.3" y2="-55" stroke="#FFD600" stroke-width="6" stroke-linecap="round"/>
+    <line x1="-60.6" y1="-35" x2="-95.3" y2="-55" stroke="#FFD600" stroke-width="6" stroke-linecap="round"/>
+    <line x1="70" y1="0" x2="110" y2="0" stroke="#FFD600" stroke-width="6" stroke-linecap="round"/>
+    <line x1="-70" y1="0" x2="-110" y2="0" stroke="#FFD600" stroke-width="6" stroke-linecap="round"/>
+    <line x1="49.5" y1="49.5" x2="77.8" y2="77.8" stroke="#FFD600" stroke-width="5" stroke-linecap="round"/>
+    <line x1="-49.5" y1="49.5" x2="-77.8" y2="77.8" stroke="#FFD600" stroke-width="5" stroke-linecap="round"/>
+    <line x1="0" y1="70" x2="0" y2="100" stroke="#FFD600" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Short rays between -->
+    <line x1="33" y1="-60" x2="44" y2="-85" stroke="#FFEB3B" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-33" y1="-60" x2="-44" y2="-85" stroke="#FFEB3B" stroke-width="4" stroke-linecap="round"/>
+    <line x1="68" y1="-20" x2="96" y2="-28" stroke="#FFEB3B" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-68" y1="-20" x2="-96" y2="-28" stroke="#FFEB3B" stroke-width="4" stroke-linecap="round"/>
+    <line x1="64" y1="26" x2="90" y2="37" stroke="#FFEB3B" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-64" y1="26" x2="-90" y2="37" stroke="#FFEB3B" stroke-width="4" stroke-linecap="round"/>
+    <line x1="27" y1="64" x2="38" y2="90" stroke="#FFEB3B" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-27" y1="64" x2="-38" y2="90" stroke="#FFEB3B" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Sun body (cute cartoon sun) -->
+  <circle cx="256" cy="195" r="62" fill="url(#sunFace)" stroke="#FFB300" stroke-width="3" filter="url(#shadow)"/>
+
+  <!-- Sun cute face -->
+  <!-- Eyes - happy closed eyes -->
+  <g transform="translate(256, 190)">
+    <!-- Left eye - happy arc -->
+    <path d="M-22,-8 Q-16,-18 -10,-8" fill="none" stroke="#5D4037" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Right eye - happy arc -->
+    <path d="M10,-8 Q16,-18 22,-8" fill="none" stroke="#5D4037" stroke-width="3.5" stroke-linecap="round"/>
+
+    <!-- Cute blush circles -->
+    <circle cx="-28" cy="2" r="8" fill="#FFAB91" opacity="0.6"/>
+    <circle cx="28" cy="2" r="8" fill="#FFAB91" opacity="0.6"/>
+
+    <!-- Cute smile -->
+    <path d="M-14,8 Q0,22 14,8" fill="none" stroke="#5D4037" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Tiny nose dot -->
+    <circle cx="0" cy="2" r="1.5" fill="#5D4037"/>
+  </g>
+
+  <!-- ============ LOTUS FLOWER ============ -->
+  <g transform="translate(256, 370)" filter="url(#shadow)">
+
+    <!-- Back petals (deeper color, spread wider) -->
+    <ellipse cx="-65" cy="-15" rx="30" ry="55" fill="url(#petalDeep)" transform="rotate(-35, -65, -15)" opacity="0.8"/>
+    <ellipse cx="65" cy="-15" rx="30" ry="55" fill="url(#petalDeep)" transform="rotate(35, 65, -15)" opacity="0.8"/>
+    <ellipse cx="-45" cy="-25" rx="26" ry="55" fill="url(#petalPink)" transform="rotate(-20, -45, -25)" opacity="0.9"/>
+    <ellipse cx="45" cy="-25" rx="26" ry="55" fill="url(#petalPink)" transform="rotate(20, 45, -25)" opacity="0.9"/>
+
+    <!-- Middle petals -->
+    <ellipse cx="-28" cy="-30" rx="24" ry="52" fill="url(#petalPink)" transform="rotate(-10, -28, -30)"/>
+    <ellipse cx="28" cy="-30" rx="24" ry="52" fill="url(#petalPink)" transform="rotate(10, 28, -30)"/>
+
+    <!-- Front petals (lighter, more prominent) -->
+    <ellipse cx="-12" cy="-35" rx="22" ry="50" fill="url(#petalLight)" transform="rotate(-3, -12, -35)"/>
+    <ellipse cx="12" cy="-35" rx="22" ry="50" fill="url(#petalLight)" transform="rotate(3, 12, -35)"/>
+
+    <!-- Center petal -->
+    <ellipse cx="0" cy="-38" rx="18" ry="48" fill="url(#petalLight)"/>
+
+    <!-- Petal vein lines for detail -->
+    <path d="M0,-85 Q0,-50 0,-5" fill="none" stroke="#F48FB1" stroke-width="1" opacity="0.5"/>
+    <path d="M-12,-82 Q-10,-50 -8,-5" fill="none" stroke="#F48FB1" stroke-width="1" opacity="0.4"/>
+    <path d="M12,-82 Q10,-50 8,-5" fill="none" stroke="#F48FB1" stroke-width="1" opacity="0.4"/>
+
+    <!-- Lotus center (golden) -->
+    <circle cx="0" cy="-15" r="14" fill="url(#lotusCenter)" stroke="#FFB300" stroke-width="1.5"/>
+
+    <!-- Center dots (seeds) -->
+    <circle cx="-4" cy="-18" r="2" fill="#F9A825"/>
+    <circle cx="4" cy="-18" r="2" fill="#F9A825"/>
+    <circle cx="0" cy="-12" r="2" fill="#F9A825"/>
+    <circle cx="-6" cy="-12" r="1.5" fill="#F9A825"/>
+    <circle cx="6" cy="-12" r="1.5" fill="#F9A825"/>
+    <circle cx="0" cy="-20" r="1.5" fill="#F9A825"/>
+
+    <!-- Small leaves under lotus -->
+    <path d="M-70,15 Q-45,-5 -20,12 Q-45,22 -70,15Z" fill="url(#leafGrad)" opacity="0.85"/>
+    <path d="M70,15 Q45,-5 20,12 Q45,22 70,15Z" fill="url(#leafGrad)" opacity="0.85"/>
+
+    <!-- Leaf veins -->
+    <path d="M-65,14 Q-42,6 -25,13" fill="none" stroke="#2E7D32" stroke-width="0.8" opacity="0.5"/>
+    <path d="M65,14 Q42,6 25,13" fill="none" stroke="#2E7D32" stroke-width="0.8" opacity="0.5"/>
+  </g>
+
+  <!-- ============ SPARKLES & PARTICLES ============ -->
+  <!-- Floating sparkles around -->
+  <g filter="url(#glow)">
+    <!-- Star sparkle 1 -->
+    <g transform="translate(100, 120)">
+      <line x1="0" y1="-8" x2="0" y2="8" stroke="#FFF9C4" stroke-width="2" stroke-linecap="round"/>
+      <line x1="-8" y1="0" x2="8" y2="0" stroke="#FFF9C4" stroke-width="2" stroke-linecap="round"/>
+      <line x1="-5" y1="-5" x2="5" y2="5" stroke="#FFF9C4" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="5" y1="-5" x2="-5" y2="5" stroke="#FFF9C4" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Star sparkle 2 -->
+    <g transform="translate(410, 140)">
+      <line x1="0" y1="-6" x2="0" y2="6" stroke="#FFF9C4" stroke-width="2" stroke-linecap="round"/>
+      <line x1="-6" y1="0" x2="6" y2="0" stroke="#FFF9C4" stroke-width="2" stroke-linecap="round"/>
+      <line x1="-4" y1="-4" x2="4" y2="4" stroke="#FFF9C4" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="4" y1="-4" x2="-4" y2="4" stroke="#FFF9C4" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Star sparkle 3 -->
+    <g transform="translate(80, 300)">
+      <line x1="0" y1="-5" x2="0" y2="5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="-5" y1="0" x2="5" y2="0" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Star sparkle 4 -->
+    <g transform="translate(430, 310)">
+      <line x1="0" y1="-5" x2="0" y2="5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="-5" y1="0" x2="5" y2="0" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Small dots/particles -->
+    <circle cx="140" cy="80" r="3" fill="#FFF9C4" opacity="0.8"/>
+    <circle cx="380" cy="90" r="2.5" fill="#FFF9C4" opacity="0.7"/>
+    <circle cx="60" cy="200" r="2" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="450" cy="230" r="2.5" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="130" cy="420" r="2" fill="#FCE4EC" opacity="0.7"/>
+    <circle cx="390" cy="430" r="2.5" fill="#FCE4EC" opacity="0.7"/>
+    <circle cx="170" cy="250" r="1.5" fill="#FFF9C4" opacity="0.5"/>
+    <circle cx="350" cy="260" r="2" fill="#FFF9C4" opacity="0.5"/>
+  </g>
+
+  <!-- Tiny floating hearts for extra cuteness -->
+  <g opacity="0.6">
+    <path d="M115,170 C115,165 110,162 107,165 C104,162 99,165 99,170 C99,176 107,181 107,181 C107,181 115,176 115,170Z" fill="#F48FB1" transform="scale(0.7) translate(10, 20)"/>
+    <path d="M575,175 C575,170 570,167 567,170 C564,167 559,170 559,175 C559,181 567,186 567,186 C567,186 575,181 575,175Z" fill="#F48FB1" transform="scale(0.7) translate(10, 20)"/>
+  </g>
+
+  <!-- Subtle water/wave line under the lotus -->
+  <path d="M100,420 Q140,410 180,420 Q220,430 260,420 Q300,410 340,420 Q380,430 420,420" fill="none" stroke="#81D4FA" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+  <path d="M120,435 Q160,425 200,435 Q240,445 280,435 Q320,425 360,435 Q400,445 440,435" fill="none" stroke="#81D4FA" stroke-width="2" stroke-linecap="round" opacity="0.25"/>
+
+</svg>

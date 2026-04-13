@@ -1,0 +1,43 @@
+<svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#FFF8E1" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="#FFF8E1" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="starBody" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFE082"/>
+              <stop offset="100%" stop-color="#FFB74D"/>
+            </linearGradient>
+          </defs>
+          <!-- 光晕 -->
+          <circle cx="75" cy="75" r="65" fill="url(#starGlow)"/>
+          <!-- 旋转的小星星 -->
+          <g class="sparkle-orbit" opacity="0.6">
+            <polygon points="30,30 32,26 34,30 38,32 34,34 32,38 30,34 26,32" fill="#FFD54F" class="sparkle-small"/>
+            <polygon points="120,40 122,36 124,40 128,42 124,44 122,48 120,44 116,42" fill="#FFD54F" class="sparkle-small"/>
+            <polygon points="35,110 37,106 39,110 43,112 39,114 37,118 35,114 31,112" fill="#FFD54F" class="sparkle-small"/>
+            <polygon points="115,105 117,101 119,105 123,107 119,109 117,113 115,109 111,107" fill="#FFD54F" class="sparkle-small"/>
+          </g>
+          <!-- 主星星 -->
+          <polygon points="75,25 85,58 120,60 92,82 100,115 75,95 50,115 58,82 30,60 65,58"
+                  fill="url(#starBody)" stroke="#FFA726" stroke-width="1"/>
+          <!-- 可爱的脸 -->
+          <!-- 眼睛 -->
+          <ellipse cx="65" cy="68" rx="3.5" ry="4.5" fill="#E65100"/>
+          <ellipse cx="85" cy="68" rx="3.5" ry="4.5" fill="#E65100"/>
+          <!-- 高光 -->
+          <circle cx="66.5" cy="66" r="1.8" fill="white"/>
+          <circle cx="86.5" cy="66" r="1.8" fill="white"/>
+          <!-- 腮红 -->
+          <ellipse cx="56" cy="78" rx="6" ry="3.5" fill="#FFAB91" opacity="0.5"/>
+          <ellipse cx="94" cy="78" rx="6" ry="3.5" fill="#FFAB91" opacity="0.5"/>
+          <!-- 微笑 -->
+          <path d="M65 80 Q75 90 85 80" stroke="#E65100" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- 小装饰闪光 -->
+          <g opacity="0.8">
+            <line x1="42" y1="42" x2="42" y2="50" stroke="#FFD54F" stroke-width="2" stroke-linecap="round" class="sparkle-small"/>
+            <line x1="38" y1="46" x2="46" y2="46" stroke="#FFD54F" stroke-width="2" stroke-linecap="round" class="sparkle-small"/>
+            <line x1="108" y1="42" x2="108" y2="50" stroke="#FFD54F" stroke-width="2" stroke-linecap="round" class="sparkle-small"/>
+            <line x1="104" y1="46" x2="112" y2="46" stroke="#FFD54F" stroke-width="2" stroke-linecap="round" class="sparkle-small"/>
+          </g>
+        </svg>

@@ -1,0 +1,46 @@
+<svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#FFF9C4" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#FFF9C4" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="sunFace" cx="45%" cy="40%" r="55%">
+              <stop offset="0%" stop-color="#FFD54F"/>
+              <stop offset="100%" stop-color="#FFB300"/>
+            </radialGradient>
+          </defs>
+          <!-- 光晕 -->
+          <circle cx="75" cy="75" r="70" fill="url(#sunGlow)"/>
+          <!-- 光线 -->
+          <g class="sun-rays">
+            <g stroke="#FFD54F" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.85">
+              <line x1="75" y1="10" x2="75" y2="30"/>
+              <line x1="75" y1="120" x2="75" y2="140"/>
+              <line x1="10" y1="75" x2="30" y2="75"/>
+              <line x1="120" y1="75" x2="140" y2="75"/>
+              <line x1="29" y1="29" x2="43" y2="43"/>
+              <line x1="107" y1="107" x2="121" y2="121"/>
+              <line x1="121" y1="29" x2="107" y2="43"/>
+              <line x1="43" y1="107" x2="29" y2="121"/>
+              <!-- 额外短光线 -->
+              <line x1="75" y1="18" x2="75" y2="25" opacity="0.5"/>
+              <line x1="47" y1="20" x2="52" y2="35" opacity="0.5"/>
+              <line x1="103" y1="20" x2="98" y2="35" opacity="0.5"/>
+              <line x1="20" y1="47" x2="35" y2="52" opacity="0.5"/>
+              <line x1="115" y1="47" x2="130" y2="52" opacity="0.5"/>
+            </g>
+          </g>
+          <!-- 太阳主体 -->
+          <circle class="sun-core" cx="75" cy="75" r="28" fill="url(#sunFace)"/>
+          <!-- 腮红 -->
+          <ellipse cx="60" cy="80" rx="6" ry="4" fill="#FF8A65" opacity="0.45"/>
+          <ellipse cx="90" cy="80" rx="6" ry="4" fill="#FF8A65" opacity="0.45"/>
+          <!-- 眼睛 -->
+          <ellipse cx="65" cy="70" rx="3.5" ry="4.5" fill="#5D4037"/>
+          <ellipse cx="85" cy="70" rx="3.5" ry="4.5" fill="#5D4037"/>
+          <!-- 眼睛高光 -->
+          <circle cx="66.5" cy="68" r="1.5" fill="white"/>
+          <circle cx="86.5" cy="68" r="1.5" fill="white"/>
+          <!-- 微笑 -->
+          <path d="M66 82 Q75 92 84 82" stroke="#5D4037" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>

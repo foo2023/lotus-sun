@@ -1,0 +1,139 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#dbeafe"/>
+      <stop offset="100%" style="stop-color:#eff6ff"/>
+    </linearGradient>
+    <linearGradient id="petalPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fce4ec"/>
+      <stop offset="50%" style="stop-color:#f48fb1"/>
+      <stop offset="100%" style="stop-color:#ec407a"/>
+    </linearGradient>
+    <linearGradient id="petalLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff8fb"/>
+      <stop offset="50%" style="stop-color:#fce4ec"/>
+      <stop offset="100%" style="stop-color:#f8bbd0"/>
+    </linearGradient>
+    <linearGradient id="petalDeep" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ad1457"/>
+      <stop offset="50%" style="stop-color:#e91e63"/>
+      <stop offset="100%" style="stop-color:#f48fb1"/>
+    </linearGradient>
+    <radialGradient id="centerGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fff9c4"/>
+      <stop offset="100%" style="stop-color:#ffd54f"/>
+    </radialGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a5d6a7"/>
+      <stop offset="100%" style="stop-color:#388e3c"/>
+    </linearGradient>
+    <radialGradient id="waterGrad" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#bbdefb"/>
+      <stop offset="100%" style="stop-color:#90caf9"/>
+    </radialGradient>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#f48fb1" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="400" height="400" fill="url(#skyGrad)" rx="20"/>
+  <g opacity="0.85">
+    <animateTransform attributeName="transform" type="translate" values="0,0;12,0;0,0" dur="8s" repeatCount="indefinite"/>
+    <ellipse cx="70" cy="80" rx="38" ry="20" fill="white"/>
+    <ellipse cx="95" cy="68" rx="28" ry="18" fill="white"/>
+    <ellipse cx="50" cy="72" rx="24" ry="15" fill="#eff6ff"/>
+    <ellipse cx="108" cy="78" rx="22" ry="13" fill="white"/>
+  </g>
+  <g opacity="0.8">
+    <animateTransform attributeName="transform" type="translate" values="0,0;-10,0;0,0" dur="10s" repeatCount="indefinite"/>
+    <ellipse cx="320" cy="60" rx="30" ry="16" fill="white"/>
+    <ellipse cx="342" cy="50" rx="22" ry="14" fill="white"/>
+    <ellipse cx="302" cy="55" rx="18" ry="11" fill="#eff6ff"/>
+  </g>
+  <g opacity="0.6">
+    <animateTransform attributeName="transform" type="translate" values="0,0;8,-3;0,0" dur="12s" repeatCount="indefinite"/>
+    <ellipse cx="200" cy="35" rx="22" ry="11" fill="white"/>
+    <ellipse cx="218" cy="28" rx="16" ry="10" fill="white"/>
+    <ellipse cx="184" cy="30" rx="13" ry="8" fill="#eff6ff"/>
+  </g>
+  <g opacity="0.45">
+    <animateTransform attributeName="transform" type="translate" values="0,0;6,0;0,0" dur="14s" repeatCount="indefinite"/>
+    <ellipse cx="40" cy="160" rx="25" ry="12" fill="#dbeafe"/>
+    <ellipse cx="58" cy="153" rx="17" ry="10" fill="#dbeafe"/>
+  </g>
+  <g opacity="0.45">
+    <animateTransform attributeName="transform" type="translate" values="0,0;-7,0;0,0" dur="11s" repeatCount="indefinite"/>
+    <ellipse cx="370" cy="140" rx="28" ry="13" fill="#dbeafe"/>
+    <ellipse cx="352" cy="132" rx="18" ry="10" fill="#dbeafe"/>
+  </g>
+  <ellipse cx="200" cy="310" rx="140" ry="22" fill="url(#waterGrad)" opacity="0.5"/>
+  <ellipse cx="200" cy="315" rx="80" ry="6" fill="none" stroke="#90caf9" stroke-width="1.5" opacity="0.4">
+    <animate attributeName="rx" values="80;105;80" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.1;0.4" dur="3s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="200" cy="318" rx="50" ry="4" fill="none" stroke="#90caf9" stroke-width="1" opacity="0.3">
+    <animate attributeName="rx" values="50;72;50" dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.05;0.3" dur="3.5s" repeatCount="indefinite"/>
+  </ellipse>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-18;0,0" dur="4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+    <path d="M200,310 Q198,290 200,265" fill="none" stroke="#4caf50" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#softShadow)">
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-18;0,0" dur="4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+    <g transform="translate(200,240)">
+      <ellipse cx="-52" cy="-12" rx="24" ry="44" fill="url(#petalDeep)" transform="rotate(-35,-52,-12)" opacity="0.75"/>
+      <ellipse cx="52" cy="-12" rx="24" ry="44" fill="url(#petalDeep)" transform="rotate(35,52,-12)" opacity="0.75"/>
+      <ellipse cx="-34" cy="-18" rx="20" ry="42" fill="url(#petalPink)" transform="rotate(-18,-34,-18)" opacity="0.9"/>
+      <ellipse cx="34" cy="-18" rx="20" ry="42" fill="url(#petalPink)" transform="rotate(18,34,-18)" opacity="0.9"/>
+      <ellipse cx="-16" cy="-22" rx="18" ry="40" fill="url(#petalLight)" transform="rotate(-6,-16,-22)"/>
+      <ellipse cx="16" cy="-22" rx="18" ry="40" fill="url(#petalLight)" transform="rotate(6,16,-22)"/>
+      <ellipse cx="0" cy="-26" rx="16" ry="38" fill="url(#petalLight)"/>
+      <path d="M0,-62 Q0,-38 0,-4" fill="none" stroke="#f48fb1" stroke-width="0.8" opacity="0.4"/>
+      <path d="M-10,-60 Q-8,-36 -6,-4" fill="none" stroke="#f48fb1" stroke-width="0.8" opacity="0.3"/>
+      <path d="M10,-60 Q8,-36 6,-4" fill="none" stroke="#f48fb1" stroke-width="0.8" opacity="0.3"/>
+      <circle cx="0" cy="-10" r="12" fill="url(#centerGrad)" stroke="#ffb300" stroke-width="1.2"/>
+      <circle cx="-3" cy="-13" r="1.8" fill="#f9a825"/>
+      <circle cx="3" cy="-13" r="1.8" fill="#f9a825"/>
+      <circle cx="0" cy="-8" r="1.8" fill="#f9a825"/>
+      <circle cx="-5" cy="-8" r="1.4" fill="#f9a825"/>
+      <circle cx="5" cy="-8" r="1.4" fill="#f9a825"/>
+      <path d="M-56,10 Q-36,-4 -16,8 Q-36,18 -56,10Z" fill="url(#leafGrad)" opacity="0.85"/>
+      <path d="M56,10 Q36,-4 16,8 Q36,18 56,10Z" fill="url(#leafGrad)" opacity="0.85"/>
+    </g>
+  </g>
+  <g fill="#ffd54f">
+    <circle cx="120" cy="200" r="3" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="2s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="1;4;1" dur="2s" begin="0s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="280" cy="180" r="3" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="1;3;1" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="150" r="2" opacity="0">
+      <animate attributeName="opacity" values="0;0.8;0" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="220" r="2" opacity="0">
+      <animate attributeName="opacity" values="0;0.8;0" dur="2.2s" begin="0.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="320" cy="200" r="2.5" opacity="0">
+      <animate attributeName="opacity" values="0;0.9;0" dur="1.8s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="90" cy="240" r="2" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="2.8s" begin="0.3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <text x="200" y="355" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" font-weight="600" fill="#533e1b">
+    加载过程中
+    <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+  </text>
+  <circle cx="174" cy="375" r="3" fill="#eca152">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" begin="0s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="186" cy="375" r="3" fill="#eca152">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" begin="0.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="198" cy="375" r="3" fill="#eca152">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" begin="0.4s" repeatCount="indefinite"/>
+  </circle>
+</svg>
